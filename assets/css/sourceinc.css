@@ -1,0 +1,31 @@
+/**
+ * SourceInc — shared styles (Tailwind handles utilities; this file is for base + components).
+ * New pages: link this after fonts + before </head>.
+ */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fb;
+  color: #191c1e;
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+  font-family: 'Noto Serif', serif;
+}
+
+/* Match Stitch: no faux-italics in display type */
+* {
+  font-style: normal !important;
+}
+
+.editorial-quote {
+  border-left: 4px solid #855300;
+}
