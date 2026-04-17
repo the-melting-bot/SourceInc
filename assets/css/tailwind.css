@@ -56,24 +56,12 @@
     }
   }
 
-  .footer-brand-lockup {
-    @apply inline-flex flex-col gap-0.5 mb-2 no-underline;
+  .footer-brand-logo {
+    @apply inline-block mb-2 no-underline leading-none;
   }
 
-  .footer-brand-lockup__mark {
-    @apply flex items-baseline gap-0;
-  }
-
-  .footer-brand-lockup__source {
-    @apply font-headline text-lg font-semibold tracking-tight text-white md:text-xl;
-  }
-
-  .footer-brand-lockup__ability {
-    @apply font-label text-lg font-bold tracking-tight text-secondary md:text-xl;
-  }
-
-  .footer-brand-lockup__tag {
-    @apply text-[9px] uppercase tracking-[0.18em] text-white/40 font-label;
+  .footer-brand-logo img {
+    @apply block h-9 w-auto max-w-[min(220px,100%)] object-contain object-left md:h-10;
   }
 
   .footer-brand p {
