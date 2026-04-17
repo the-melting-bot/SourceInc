@@ -1,9 +1,8 @@
-/**
- * Shared Tailwind theme for SourceInc (Tailwind CDN).
- * Load after: <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
- */
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: 'class',
+  // Add paths when you add subfolders (e.g. './pages/**/*.html'). Avoid bare `./**` — it scans node_modules.
+  content: ['./*.html', './pages/**/*.html', './partials/**/*.html'],
   theme: {
     extend: {
       colors: {
@@ -68,4 +67,5 @@ tailwind.config = {
       },
     },
   },
+  plugins: [require('@tailwindcss/forms')],
 };
