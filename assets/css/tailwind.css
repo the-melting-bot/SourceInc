@@ -34,4 +34,129 @@
   .editorial-quote {
     border-left: 4px solid #855300;
   }
+
+  /* Footer — compact vertical rhythm (aligned with prior Lazio-scale footers) */
+  .site-footer {
+    @apply bg-primary text-white/70 pt-8 pb-0 md:pt-10;
+  }
+
+  .footer-grid {
+    @apply grid grid-cols-1 gap-6 md:gap-8 pb-8 border-b border-white/[0.08];
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      @apply grid-cols-2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-brand-lockup {
+    @apply inline-flex flex-col gap-1 mb-3 no-underline;
+  }
+
+  .footer-brand-lockup__mark {
+    @apply flex items-baseline gap-0.5;
+  }
+
+  .footer-brand-lockup__source {
+    @apply font-headline text-xl font-semibold tracking-tight text-white md:text-2xl;
+  }
+
+  .footer-brand-lockup__inc {
+    @apply font-label text-xl font-bold tracking-tight text-secondary md:text-2xl;
+  }
+
+  .footer-brand-lockup__tag {
+    @apply text-[10px] uppercase tracking-[0.2em] text-white/45 font-label;
+  }
+
+  .footer-brand p {
+    @apply text-sm leading-snug text-white/50 max-w-[300px] font-body;
+  }
+
+  .footer-heading {
+    @apply text-xs font-semibold uppercase tracking-[0.12em] text-white/40 mb-4 font-label;
+  }
+
+  .footer-links {
+    @apply list-none flex flex-col gap-3;
+  }
+
+  .footer-links a {
+    @apply text-sm text-white/[0.65] no-underline transition-colors hover:text-white font-body;
+  }
+
+  .social-links {
+    @apply flex gap-3 mt-4;
+  }
+
+  .social-links a {
+    @apply w-9 h-9 flex items-center justify-center rounded-md bg-white/[0.06] text-white/60 transition-colors hover:bg-secondary-container hover:text-white;
+  }
+
+  .social-links a svg {
+    @apply block shrink-0;
+  }
+
+  .footer-bottom {
+    @apply py-4 md:py-5 grid gap-3 items-center;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .footer-bottom__copy {
+    @apply justify-self-start m-0 text-xs text-white/35 min-w-0 font-body;
+  }
+
+  .footer-bottom__credit {
+    @apply justify-self-center;
+  }
+
+  .footer-bottom__legal {
+    @apply justify-self-end;
+  }
+
+  .footer-bottom__legal ul {
+    @apply list-none flex gap-6 m-0 p-0;
+  }
+
+  .footer-legal-link {
+    @apply text-xs text-white/35 no-underline transition-colors hover:text-white font-body;
+  }
+
+  @media (max-width: 900px) {
+    .footer-bottom {
+      @apply grid-cols-1 justify-items-center text-center;
+    }
+
+    .footer-bottom__copy,
+    .footer-bottom__legal {
+      @apply justify-self-center;
+    }
+  }
+
+  .tmb-badge {
+    @apply inline-flex items-center gap-2.5 py-2 pl-3.5 pr-4 rounded-full text-[11px] font-medium tracking-[0.06em] text-[#e8e8e8] no-underline transition-all;
+    font-family: 'Orbitron', sans-serif;
+    background: #1a1a1a;
+    border: 1px solid #00f0ff;
+    box-shadow: none;
+  }
+
+  .tmb-badge:hover {
+    border-color: #33f3ff;
+    color: #fff;
+    box-shadow:
+      0 0 16px rgba(0, 240, 255, 0.25),
+      0 0 4px rgba(0, 240, 255, 0.15);
+  }
+
+  .tmb-badge svg {
+    @apply shrink-0;
+  }
 }
