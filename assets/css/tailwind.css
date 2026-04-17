@@ -35,13 +35,15 @@
     border-left: 4px solid #855300;
   }
 
-  /* Footer — tight vertical rhythm */
+  /* Footer — clean, tight, professional */
   .site-footer {
-    @apply bg-primary text-white/70 pt-5 pb-0 md:pt-6;
+    @apply border-t border-white/[0.06] bg-primary text-white/70;
+    @apply pt-6 pb-0 sm:pt-7;
   }
 
   .footer-grid {
-    @apply grid grid-cols-1 gap-4 md:gap-6 pb-5 border-b border-white/[0.08];
+    @apply grid grid-cols-1 items-start gap-y-8 gap-x-8 pb-6;
+    @apply border-b border-white/[0.08] md:gap-x-10 lg:gap-x-12;
   }
 
   @media (min-width: 640px) {
@@ -52,40 +54,45 @@
 
   @media (min-width: 1024px) {
     .footer-grid {
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr));
     }
   }
 
+  .footer-brand {
+    @apply flex min-w-0 flex-col gap-2.5;
+  }
+
   .footer-brand-logo {
-    @apply inline-block mb-2 no-underline leading-none;
+    @apply block w-fit max-w-full rounded-sm no-underline leading-none outline-none transition-opacity;
+    @apply hover:opacity-90 focus-visible:opacity-90 focus-visible:ring-1 focus-visible:ring-white/25 focus-visible:ring-offset-2 focus-visible:ring-offset-primary;
   }
 
   .footer-brand-logo img {
-    @apply block h-9 w-auto max-w-[min(220px,100%)] object-contain object-left md:h-10;
+    @apply block h-[48px] w-auto max-w-[min(280px,100%)] object-contain object-left sm:h-[54px] md:h-[58px];
   }
 
   .footer-brand p {
-    @apply text-xs leading-relaxed text-white/50 max-w-[280px] font-body;
+    @apply max-w-[17.5rem] text-[11px] font-normal leading-[1.45] text-white/45 font-body;
   }
 
   .footer-heading {
-    @apply text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40 mb-2 font-label;
+    @apply mb-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/35 font-label;
   }
 
   .footer-links {
-    @apply list-none flex flex-col gap-1.5;
+    @apply m-0 flex list-none flex-col gap-1 p-0;
   }
 
   .footer-links a {
-    @apply text-xs text-white/[0.65] no-underline transition-colors hover:text-white font-body;
+    @apply text-[11px] font-normal leading-snug text-white/[0.72] no-underline transition-colors hover:text-white font-body;
   }
 
   .social-links {
-    @apply flex gap-2 mt-3;
+    @apply mt-1 flex gap-1.5;
   }
 
   .social-links a {
-    @apply w-8 h-8 flex items-center justify-center rounded-md bg-white/[0.06] text-white/60 transition-colors hover:bg-secondary-container hover:text-white;
+    @apply flex h-7 w-7 shrink-0 items-center justify-center rounded border border-white/[0.08] bg-white/[0.04] text-white/55 transition-colors hover:border-white/15 hover:bg-white/[0.08] hover:text-white;
   }
 
   .social-links a svg {
@@ -93,12 +100,12 @@
   }
 
   .footer-bottom {
-    @apply py-3 grid gap-2 items-center;
+    @apply grid items-center gap-y-2.5 py-4;
     grid-template-columns: 1fr auto 1fr;
   }
 
   .footer-bottom__copy {
-    @apply justify-self-start m-0 text-[11px] text-white/35 min-w-0 font-body leading-snug;
+    @apply m-0 min-w-0 justify-self-start font-body text-[10px] leading-snug text-white/30;
   }
 
   .footer-bottom__credit {
@@ -114,7 +121,7 @@
   }
 
   .footer-legal-link {
-    @apply text-[11px] text-white/35 no-underline transition-colors hover:text-white font-body;
+    @apply font-body text-[10px] text-white/30 no-underline transition-colors hover:text-white;
   }
 
   @media (max-width: 900px) {
