@@ -72,13 +72,50 @@
   }
 
   /* Logo: one layer only — no extra “chip” (avoids double-boxing with artwork). Scaled from hi-res PNG. */
+  /* Logo wordmark — HTML/CSS, no PNG, sharp at any resolution */
   .footer-brand-logo {
-    @apply inline-block max-w-full no-underline outline-none transition-opacity;
-    @apply hover:opacity-[0.92] focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+    @apply inline-flex flex-col no-underline outline-none transition-opacity;
+    @apply hover:opacity-80 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+    gap: 0.18rem;
   }
 
-  .footer-brand-logo img {
-    @apply block h-[52px] w-auto max-w-[min(340px,100%)] object-contain object-left sm:h-14 md:h-[60px];
+  .footer-brand-logo__wordmark {
+    @apply flex items-center;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-brand-logo__icon {
+    @apply mr-1.5 flex-shrink-0;
+    color: #e03b2f;
+  }
+
+  .footer-brand-logo__source {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #002052;
+    line-height: 1;
+  }
+
+  .footer-brand-logo__ability {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #e03b2f;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  .footer-brand-logo__tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    color: rgba(25, 28, 30, 0.45);
+    padding-left: 2.05rem;
+    margin-top: 0.15rem;
   }
 
   .footer-brand p {
