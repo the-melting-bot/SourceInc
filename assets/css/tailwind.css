@@ -48,11 +48,11 @@
   }
 
   .footer-main__inner {
-    @apply mx-auto max-w-screen-2xl px-6 py-14 sm:px-10 sm:py-16 lg:px-14 lg:py-20;
+    @apply mx-auto max-w-screen-2xl px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-12;
   }
 
   .footer-grid {
-    @apply grid grid-cols-1 items-start gap-x-10 gap-y-12 md:gap-x-12 md:gap-y-14 lg:gap-x-16 lg:gap-y-16;
+    @apply grid grid-cols-1 items-start gap-x-8 gap-y-8 md:gap-x-10 md:gap-y-10 lg:gap-x-12 lg:gap-y-10;
   }
 
   @media (min-width: 640px) {
@@ -68,7 +68,7 @@
   }
 
   .footer-brand {
-    @apply flex min-w-0 flex-col gap-4 md:gap-5;
+    @apply flex min-w-0 flex-col gap-3 md:gap-4;
   }
 
   /* Logo: 290×66 RGBA PNG — transparent BG, works on light footer */
@@ -80,7 +80,7 @@
 
   .footer-brand-logo img {
     display: block;
-    height: 44px;
+    height: 40px;
     width: auto;
     max-width: min(290px, 100%);
     object-fit: contain;
@@ -88,11 +88,11 @@
   }
 
   @media (min-width: 640px) {
-    .footer-brand-logo img { height: 48px; }
+    .footer-brand-logo img { height: 44px; }
   }
 
   @media (min-width: 1024px) {
-    .footer-brand-logo img { height: 52px; }
+    .footer-brand-logo img { height: 48px; }
   }
 
   .footer-brand p {
@@ -100,11 +100,11 @@
   }
 
   .footer-heading {
-    @apply mb-3 font-label text-[11px] font-bold uppercase tracking-[0.16em] text-primary md:mb-4;
+    @apply mb-2 font-label text-[11px] font-bold uppercase tracking-[0.16em] text-primary md:mb-2.5;
   }
 
   .footer-links {
-    @apply m-0 flex list-none flex-col gap-2.5 p-0 md:gap-3;
+    @apply m-0 flex list-none flex-col gap-2 p-0 md:gap-2.5;
   }
 
   .footer-links a {
@@ -114,11 +114,11 @@
   }
 
   .social-links {
-    @apply mt-1 flex gap-2.5;
+    @apply mt-0 flex gap-2;
   }
 
   .social-links a {
-    @apply flex h-9 w-9 shrink-0 items-center justify-center rounded border border-outline-variant/60 bg-surface-container-low text-on-surface-variant;
+    @apply flex h-8 w-8 shrink-0 items-center justify-center rounded border border-outline-variant/60 bg-surface-container-low text-on-surface-variant;
     @apply transition-all duration-200 ease-out;
     @apply hover:scale-105 hover:border-primary/35 hover:bg-white hover:text-primary hover:shadow-sm;
   }
@@ -132,11 +132,11 @@
   }
 
   .footer-bar__inner {
-    @apply mx-auto max-w-screen-2xl px-6 py-5 sm:px-10 lg:px-14 md:py-6;
+    @apply mx-auto max-w-screen-2xl px-6 py-3 sm:px-10 lg:px-14 md:py-3.5;
   }
 
   .footer-bottom {
-    @apply grid items-center gap-y-4;
+    @apply grid items-center gap-y-2.5;
     grid-template-columns: 1fr auto 1fr;
   }
 
