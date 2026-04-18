@@ -1,6 +1,6 @@
-# SourceInc
+# SourceAbility site (redesign)
 
-Workspace for the SourceAbility site **rebrand / redesign** (exported from Stitch).
+Workspace for the SourceAbility **rebrand / redesign** (exported from Stitch).
 
 ## CSS / Tailwind (build pipeline)
 

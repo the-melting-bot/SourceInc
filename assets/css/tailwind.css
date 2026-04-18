@@ -1,5 +1,5 @@
 /**
- * SourceInc — Tailwind entry (build: npm run build:css).
+ * SourceAbility site — Tailwind entry (build: npm run build:css).
  * Output: assets/css/main.css
  */
 @tailwind base;
@@ -33,6 +33,65 @@
 @layer components {
   .editorial-quote {
     border-left: 4px solid #855300;
+  }
+
+  /* Header — aligned with sourceability-website: utility bar + main row, generous padding */
+  .site-header {
+    @apply fixed left-0 right-0 top-0 z-50 border-b border-black/[0.08] bg-white/95 backdrop-blur-md;
+  }
+
+  .header-top {
+    @apply bg-[#0f1a2e] py-2;
+  }
+
+  .header-top-inner {
+    @apply mx-auto flex max-w-screen-2xl items-center justify-end gap-6 px-6 lg:px-10;
+  }
+
+  .header-top a {
+    @apply flex items-center gap-1 font-label text-xs font-medium text-white/70 no-underline transition-colors hover:text-white;
+  }
+
+  .header-top__icon {
+    font-size: 14px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  }
+
+  .header-main {
+    @apply mx-auto flex max-w-screen-2xl flex-col items-stretch gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 lg:px-10 lg:py-6;
+  }
+
+  .site-header__logo {
+    @apply flex shrink-0 items-center no-underline;
+  }
+
+  .site-header__logo img {
+    @apply block h-10 w-auto max-w-[min(260px,48vw)] object-contain object-left sm:h-11;
+  }
+
+  .site-header__nav {
+    @apply flex min-w-0 flex-1 flex-wrap items-center justify-start gap-x-1 gap-y-1 sm:justify-end sm:gap-x-2 lg:gap-x-3;
+  }
+
+  .site-header__link {
+    @apply whitespace-nowrap rounded px-3 py-2.5 font-label text-xs font-medium text-on-surface-variant transition-colors hover:text-primary sm:text-[0.8125rem] sm:leading-tight;
+  }
+
+  .site-header__link--active {
+    @apply font-semibold text-primary;
+  }
+
+  .site-header__cta {
+    @apply ml-0.5 whitespace-nowrap rounded-md px-5 py-2.5 font-label text-xs font-semibold text-white transition-colors sm:text-[0.8125rem];
+    background-color: #b9342e;
+  }
+
+  .site-header__cta:hover {
+    background-color: #a02d28;
+  }
+
+  .site-header__cta--active {
+    @apply ring-2 ring-[#b9342e] ring-offset-2 ring-offset-white;
   }
 
   /*
