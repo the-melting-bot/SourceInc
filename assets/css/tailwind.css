@@ -35,15 +35,24 @@
     border-left: 4px solid #855300;
   }
 
-  /* Footer — clean, tight, professional */
+  /*
+   * Footer — Stitch-style: light main band (links + brand) + separate bottom bar.
+   * Navy CTA ends in <main>; this footer is not part of that blue block.
+   */
   .site-footer {
-    @apply border-t border-white/[0.06] bg-primary text-white/70;
-    @apply pt-6 pb-0 sm:pt-7;
+    @apply w-full;
+  }
+
+  .footer-main {
+    @apply border-t border-outline-variant/40 bg-surface text-on-surface;
+  }
+
+  .footer-main__inner {
+    @apply mx-auto max-w-screen-2xl px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14;
   }
 
   .footer-grid {
-    @apply grid grid-cols-1 items-start gap-y-8 gap-x-8 pb-6;
-    @apply border-b border-white/[0.08] md:gap-x-10 lg:gap-x-12;
+    @apply grid grid-cols-1 items-start gap-x-8 gap-y-10 md:gap-x-10 lg:gap-x-14;
   }
 
   @media (min-width: 640px) {
@@ -59,53 +68,61 @@
   }
 
   .footer-brand {
-    @apply flex min-w-0 flex-col gap-2.5;
+    @apply flex min-w-0 flex-col gap-3;
   }
 
   .footer-brand-logo {
     @apply block w-fit max-w-full rounded-sm no-underline leading-none outline-none transition-opacity;
-    @apply hover:opacity-90 focus-visible:opacity-90 focus-visible:ring-1 focus-visible:ring-white/25 focus-visible:ring-offset-2 focus-visible:ring-offset-primary;
+    @apply hover:opacity-90 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-primary/25 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
 
   .footer-brand-logo img {
-    @apply block h-[48px] w-auto max-w-[min(280px,100%)] object-contain object-left sm:h-[54px] md:h-[58px];
+    @apply block h-[44px] w-auto max-w-[min(260px,100%)] object-contain object-left sm:h-[50px] md:h-[54px];
   }
 
   .footer-brand p {
-    @apply max-w-[17.5rem] text-[11px] font-normal leading-[1.45] text-white/45 font-body;
+    @apply max-w-[18rem] font-body text-[11px] font-normal leading-relaxed text-on-surface-variant;
   }
 
   .footer-heading {
-    @apply mb-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/35 font-label;
+    @apply mb-2 font-label text-[10px] font-bold uppercase tracking-[0.18em] text-primary;
   }
 
   .footer-links {
-    @apply m-0 flex list-none flex-col gap-1 p-0;
+    @apply m-0 flex list-none flex-col gap-1.5 p-0;
   }
 
   .footer-links a {
-    @apply text-[11px] font-normal leading-snug text-white/[0.72] no-underline transition-colors hover:text-white font-body;
+    @apply font-body text-[11px] font-medium leading-snug text-on-surface no-underline transition-colors hover:text-primary;
   }
 
   .social-links {
-    @apply mt-1 flex gap-1.5;
+    @apply mt-0.5 flex gap-2;
   }
 
   .social-links a {
-    @apply flex h-7 w-7 shrink-0 items-center justify-center rounded border border-white/[0.08] bg-white/[0.04] text-white/55 transition-colors hover:border-white/15 hover:bg-white/[0.08] hover:text-white;
+    @apply flex h-8 w-8 shrink-0 items-center justify-center rounded border border-outline-variant/60 bg-surface-container-low text-on-surface-variant transition-colors hover:border-primary/30 hover:bg-white hover:text-primary;
   }
 
   .social-links a svg {
     @apply block shrink-0;
   }
 
+  .footer-bar {
+    @apply border-t border-outline-variant/50 bg-surface-container-low text-on-surface;
+  }
+
+  .footer-bar__inner {
+    @apply mx-auto max-w-screen-2xl px-5 py-3.5 sm:px-8 lg:px-12 md:py-4;
+  }
+
   .footer-bottom {
-    @apply grid items-center gap-y-2.5 py-4;
+    @apply grid items-center gap-y-3;
     grid-template-columns: 1fr auto 1fr;
   }
 
   .footer-bottom__copy {
-    @apply m-0 min-w-0 justify-self-start font-body text-[10px] leading-snug text-white/30;
+    @apply m-0 min-w-0 justify-self-start font-body text-[10px] uppercase leading-snug tracking-wide text-on-surface-variant;
   }
 
   .footer-bottom__credit {
@@ -117,11 +134,11 @@
   }
 
   .footer-bottom__legal ul {
-    @apply list-none flex gap-6 m-0 p-0;
+    @apply m-0 flex list-none gap-5 p-0;
   }
 
   .footer-legal-link {
-    @apply font-body text-[10px] text-white/30 no-underline transition-colors hover:text-white;
+    @apply font-body text-[10px] uppercase tracking-wide text-on-surface-variant no-underline transition-colors hover:text-primary;
   }
 
   @media (max-width: 900px) {
