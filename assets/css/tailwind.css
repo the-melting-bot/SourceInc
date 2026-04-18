@@ -71,14 +71,14 @@
     @apply flex min-w-0 flex-col gap-3;
   }
 
-  /* Dark chip on light footer so SOURCEABILITY lockup (designed for navy) reads clearly */
+  /* Logo: one layer only — no extra “chip” (avoids double-boxing with artwork). Scaled from hi-res PNG. */
   .footer-brand-logo {
-    @apply inline-flex max-w-full items-center justify-start rounded-lg bg-primary px-3 py-2.5 no-underline shadow-sm outline-none ring-1 ring-black/10 transition-opacity;
-    @apply hover:opacity-95 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+    @apply inline-block max-w-full no-underline outline-none transition-opacity;
+    @apply hover:opacity-[0.92] focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
 
   .footer-brand-logo img {
-    @apply block h-9 w-auto max-w-[min(200px,100%)] object-contain object-left sm:h-10 md:h-11;
+    @apply block h-[52px] w-auto max-w-[min(340px,100%)] object-contain object-left sm:h-14 md:h-[60px];
   }
 
   .footer-brand p {
