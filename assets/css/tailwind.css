@@ -73,11 +73,25 @@
   }
 
   .site-header__logo {
-    @apply flex shrink-0 items-center no-underline;
+    @apply flex shrink-0 items-center leading-none no-underline;
+    @apply focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
   }
 
+  /* Same asset + proportions as sourceability-website header (293×40 PNG, displayed ~32–36px tall) */
   .site-header__logo img {
-    @apply block h-10 w-auto max-w-[min(260px,48vw)] object-contain object-left sm:h-11;
+    display: block;
+    height: 32px;
+    width: auto;
+    max-width: min(240px, 55vw);
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  @media (min-width: 640px) {
+    .site-header__logo img {
+      height: 36px;
+      max-width: min(270px, 50vw);
+    }
   }
 
   .site-header__nav {
