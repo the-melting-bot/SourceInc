@@ -35,6 +35,16 @@
     border-left: 4px solid #855300;
   }
 
+  /* Hero eyebrow — pill/badge (faded blue from design tokens: primary-fixed + primary) */
+  .hero-eyebrow {
+    @apply inline-flex items-center font-label text-xs font-bold uppercase text-primary mb-6;
+    @apply rounded-full border border-primary/20 bg-primary-fixed px-4 py-[0.45rem];
+    letter-spacing: 0.06em;
+    box-shadow:
+      0 1px 2px rgba(0, 32, 82, 0.06),
+      0 2px 12px rgba(0, 32, 82, 0.08);
+  }
+
   /* Header — aligned with sourceability-website: utility bar + main row, generous padding */
   .site-header {
     @apply fixed left-0 right-0 top-0 z-50 border-b border-black/[0.08] bg-white/95 backdrop-blur-md;
